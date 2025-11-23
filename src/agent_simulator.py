@@ -1,4 +1,4 @@
-# src/agent_simulator.py (CÓDIGO FINAL Y FUNCIONAL)
+# src/agent_simulator.py 
 # -*- coding: utf-8 -*-
 import string 
 
