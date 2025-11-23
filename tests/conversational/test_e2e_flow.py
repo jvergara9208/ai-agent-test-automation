@@ -1,4 +1,4 @@
-# tests/conversational/test_e2e_flow.py (CÓDIGO FINAL Y CORREGIDO)
+# tests/conversational/test_e2e_flow.py 
 import pytest
 from src.agent_simulator import agent # Importamos el simulador de agente AI
 
