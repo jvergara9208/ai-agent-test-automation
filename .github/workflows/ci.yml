@@ -1,1 +1,48 @@
- 
+# .github/workflows/ci.yml
+
+name: Continuous Integration - QA Tests
+
+on:
+  push:
+    # Se ejecuta en cada push a las ramas principales
+    branches: [ main, master ]
+  pull_request:
+    # Se ejecuta en cada Pull Request contra las ramas principales
+    branches: [ main, master ]
+
+jobs:
+  run_pytest_tests:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Code
+      # Descarga el código del repositorio
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      # Configura el ambiente de Python usando tu versión local
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.13' # Usando la versión 3.13 que confirmaste
+
+    - name: Install Dependencies
+      run: |
+        # Actualiza pip e instala todas las librerías desde requirements.txt
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Run Pytest & Generate Report (Req 1, 2, 3)
+      # Ejecuta las 9 pruebas (API, E2E, Voice)
+      run: |
+        pytest -v --junitxml=report.xml
+        
+    - name: Upload Test Results
+      # Sube el reporte XML como un artefacto de la ejecución
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: report.xml
+        
+    - name: Final Success Message
+      if: success()
+      run: echo "La Pipeline de QA se ejecutó exitosamente. Todos los requisitos validados."
