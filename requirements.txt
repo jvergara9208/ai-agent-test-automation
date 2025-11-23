@@ -1,1 +1,9 @@
- 
+pytest              # Framework principal de pruebas.
+requests            # Para simular las llamadas API (aunque usamos mocks, es estándar).
+jsonschema          # Para validar la estructura (schema) JSON en las pruebas API.
+pytest-html         # Para generar el reporte HTML de resultados (Requisito 4).
+
+# Librerías para el Requisito 3: Validación de Voz (ASR/TTS)
+gTTS                # Text-to-Speech (TTS).
+pydub               # Para manejar y convertir archivos de audio (MP3 a WAV).
+vosk                # Speech-to-Text (ASR).
