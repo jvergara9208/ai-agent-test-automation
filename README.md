@@ -1,12 +1,12 @@
-**# 🍲 AI Agent Test Automation Challenge (El Gran Chanchito)**
+# 🍲 AI Agent Test Automation Challenge (El Gran Chanchito)
 
 Este repositorio contiene la solución técnica al Reto de Automatización de Pruebas de QA, enfocado en validar un agente de pedidos simulado para un restaurante de comida colombiana.
 
 El proyecto implementa un framework de pruebas robusto que cubre la validación de API, el flujo conversacional E2E (End-to-End) y la integridad de los componentes de voz (ASR/TTS), utilizando Pytest y el principio de normalización de entrada.
 
-\---
+---
 
-**## 🚀 1. Configuración e Instalación del Entorno**
+## 🚀 1. Configuración e Instalación del Entorno
 
 Sigue estos pasos para configurar tu entorno de desarrollo y poder ejecutar las pruebas.
 
