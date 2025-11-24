@@ -35,9 +35,9 @@ python -m venv venv
 source venv/bin/activate
 ```
 ### 3. Instalar las dependencias listadas en requirements.txt
-```bash
-pip install -r [requirements.tx](http://requirements.tx)
-```
+
+pip install -r [requirements.tx](./requirements.txt)
+
 
 
 -----
@@ -56,11 +56,10 @@ Todas las pruebas se ejecutan usando el comando pytest.
 ### <a name="_o8pjtqfis2q1"></a>**3.1. Ejecución Completa de Todos los Requisitos (Recomendado)**
 Este comando ejecuta todas las pruebas (API, E2E y Voz) y genera un reporte detallado:
 
-Bash
-
+```bash
 pytest -v --html=reporte\_qa.html --self-contained-html --durations=0
-
-- **Resultado esperado:** **9 tests pasados** (3 API + 4 E2E + 2 Voz).
+```
+- **Resultado esperado:** **8 tests pasados** (2 API + 4 E2E + 2 Voz).
 - El reporte reporte\_qa.html se generará en la raíz del proyecto.
 ### <a name="_lum7fhyw8z5h"></a>**3.2. Ejecución de Pruebas Individuales por Requisito**
 Puedes ejecutar conjuntos de pruebas específicos usando los **marcadores** definidos en los archivos:
